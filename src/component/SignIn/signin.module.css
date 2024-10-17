@@ -2,7 +2,8 @@
     display: grid;
     grid-template-areas: 
         "header header"
-        "img   sign";
+        "img   sign"
+        "footer footer";
 }
 
 .logo{
@@ -202,7 +203,7 @@
 .eyes__slash{
     position: absolute;
     right: 130px;
-    top: 59%;
+    top: 58%;
     transform: translateY(-50%);
     cursor: pointer;
 }

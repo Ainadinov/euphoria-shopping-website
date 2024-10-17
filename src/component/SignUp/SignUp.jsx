@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import Footer from "../Footer/Footer";
 
 function AuthSignUp () {
     const [email, setEmail] = useState("")
@@ -100,7 +101,7 @@ function AuthSignUp () {
                     <Link to="/auth-signin"> Sign in</Link>  
                 </span>
             </div>
-
+            <Footer/>
         </div>
     )
 }

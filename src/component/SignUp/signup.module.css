@@ -2,7 +2,8 @@
     display: grid;
     grid-template-areas: 
         "header header"
-        "img   sign";
+        "img   sign"
+        "footer footer";
 }
 
 .logo{
@@ -97,7 +98,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding: 60px 100px 200px 77px;
+    padding: 60px 100px 120px 77px;
 
     span{
         font-family: 'Causten';
@@ -202,8 +203,8 @@
 
 .eyes__slash{
     position: absolute;
-    right: 130px;
-    top: 52%;
+    right: 125px;
+    top: 56%;
     transform: translateY(-50%);
     cursor: pointer;
 }

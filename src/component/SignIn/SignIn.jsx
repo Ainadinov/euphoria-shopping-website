@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
+import Footer from "../Footer/Footer";
 
 const saveTokenToLocalStorage = (token) => {
     localStorage.setItem('accessToken', token);
@@ -91,7 +92,7 @@ function AuthSignIn ({setIsLogged}) {
                     <Link to="/auth-signup"> Sign up</Link>  
                 </span>
             </div>
-
+            <Footer/>
         </div>
     )
 }

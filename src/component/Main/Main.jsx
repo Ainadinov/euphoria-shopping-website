@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Header from "../Header/header";
 import styleMain from "./main.module.css"
 
@@ -72,6 +73,7 @@ function Main ({isLogged}) {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }
