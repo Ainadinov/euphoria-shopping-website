@@ -11,45 +11,45 @@
     flex-direction: column;
     gap: 10px;
 
-    h1{
-        position: relative;
-        padding-left: 21px;
     
-        font-family: 'Core Sans C';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 34px;
-    
-        letter-spacing: 0.02em;
-        color: #3C4242;
-    
-        &::before{
-            content: "";
-            display: block;
-    
-            position: absolute;
-            width: 6px;
-            height: 28px;
-            left: 0px;
-            top: 1px;
-    
-            background: #8A33FD;
-            border-radius: 10px;
-        }
+h1{
+    position: relative;
+    padding-left: 21px;
+
+    font-family: 'Core Sans C';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+
+    letter-spacing: 0.02em;
+    color: #3C4242;
+
+    &::before{
+        content: "";
+        display: block;
+
+        position: absolute;
+        width: 6px;
+        height: 28px;
+        left: 0px;
+        top: 1px;
+
+        background: #8A33FD;
+        border-radius: 10px;
     }
-    
-    p{
-        font-family: 'Core Sans C';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 34px;
-        letter-spacing: 0.02em;
-    
-        color: #807D7E;
-    }
-    
+}
+
+p{
+    font-family: 'Core Sans C';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+
+    color: #807D7E;
+}
 }
 
 

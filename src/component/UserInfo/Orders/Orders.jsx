@@ -2,33 +2,27 @@ import { PiUser } from "react-icons/pi"
 import { Link } from "react-router-dom"
 import { RxExit } from "react-icons/rx"
 import { GoChecklist } from "react-icons/go";
-import Footer from "../Footer/Footer"
-import Header from "../Header/header"
-import styleUserInfo from "./userinfo.module.css"
+import styleUserInfo from "./orders.module.css"
+import Header from "../../Header/header";
+import Footer from "../../Footer/Footer";
 
 
-function UserInfo({setIsLogged, isLogged}){
-    const handleLogout = () => {
-        setIsLogged(false);
-  
-        localStorage.removeItem('accessToken');
-    }
-    
+function Orders(){
     return(
         <>
-            <Header isLogged={isLogged}/>
+            <Header/>
             <div className={styleUserInfo.user}>
                 <div className={styleUserInfo.user__sidebar}>
                     <h1>Hello</h1>
                     <p>Welcome to my account</p>
                     <nav className={styleUserInfo.user__nav}>
-                        <Link to="/user-info/orders">
+                        <Link to="/user-info/orders" className={styleUserInfo.user__nav__main}>
                             <GoChecklist /> 
                             <span>
                                 My Orders
                             </span>
                         </Link>
-                        <Link to="/user-info" className={styleUserInfo.user__nav__main}>
+                        <Link to="/user-info">
                             <PiUser /> 
                             <span>
                                 My Info
@@ -36,7 +30,7 @@ function UserInfo({setIsLogged, isLogged}){
                         </Link>
                         <Link to="/">
                             <RxExit /> 
-                            <span onClick={handleLogout}>
+                            <span>
                                 Sign Out
                             </span>
                         </Link>
@@ -52,4 +46,4 @@ function UserInfo({setIsLogged, isLogged}){
 
 }
 
-export default UserInfo
+export default Orders

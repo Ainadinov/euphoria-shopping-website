@@ -4,6 +4,7 @@ import AuthSignIn from "./component/SignIn/SignIn";
 import Main from "./component/Main/Main";
 import AuthSignUp from "./component/SignUp/SignUp";
 import UserInfo from "./component/UserInfo/UserInfo";
+import Orders from "./component/UserInfo/Orders/Orders";
 // json-server --watch db.json --port 5000
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
           <Route path="/" element={<Main isLogged={isLogged}/>}/>
           <Route path="/auth-signin" element={<AuthSignIn setIsLogged={setIsLogged}/>}/>      
           <Route path="/auth-signup" element={<AuthSignUp/>}/>      
-          <Route path="/user-info" element={<UserInfo/>}/>      
+          <Route path="/user-info" element={<UserInfo setIsLogged={setIsLogged} isLogged={isLogged}/>}/>      
+          <Route path="/user-info/orders" element={<Orders/>}/>      
         </Routes>
     </BrowserRouter>
 
