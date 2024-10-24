@@ -7,10 +7,10 @@ import Header from "../../Header/header";
 import Footer from "../../Footer/Footer";
 
 
-function Orders(){
+function Orders({isLogged}){
     return(
         <>
-            <Header/>
+            <Header isLogged={isLogged}/>
             <div className={styleUserInfo.user}>
                 <div className={styleUserInfo.user__sidebar}>
                     <h1>Hello</h1>

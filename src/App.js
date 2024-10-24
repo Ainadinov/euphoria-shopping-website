@@ -24,7 +24,7 @@ function App() {
           <Route path="/auth-signin" element={<AuthSignIn setIsLogged={setIsLogged}/>}/>      
           <Route path="/auth-signup" element={<AuthSignUp/>}/>      
           <Route path="/user-info" element={<UserInfo setIsLogged={setIsLogged} isLogged={isLogged}/>}/>      
-          <Route path="/user-info/orders" element={<Orders/>}/>      
+          <Route path="/user-info/orders" element={<Orders isLogged={isLogged}/>}/>      
         </Routes>
     </BrowserRouter>
 

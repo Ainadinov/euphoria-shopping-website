@@ -9,13 +9,20 @@ import styleHeader from "./header.module.css"
 function Header({isLogged}){
     return(
         <header>
-            <img src="/img/Header/Logo.png" alt="#" />
+            <Link to="/">
+                <img src="/img/header/Logo.png" alt="#" />
+            </Link>
 
             <nav>
-                <button>Shop</button>
-                <button>Men</button>
-                <button>Women</button>
-                <button>Kids</button>
+                <Link to="/">
+                    <button>Shop</button>
+                </Link>
+                <Link to="/men">
+                    <button>Men</button>
+                </Link>
+                <Link to="/women">
+                    <button>Women</button>
+                </Link>
             </nav>
 
             <div className={styleHeader.search}>
