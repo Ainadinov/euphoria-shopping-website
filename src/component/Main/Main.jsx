@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa6";
 import Footer from "../Footer/Footer";
 import Header from "../Header/header";
 import styleMain from "./main.module.css"
-import { FaStar } from "react-icons/fa6";
+import axios from "axios";
 
 function Main ({isLogged}) {
+    const [products, setProducts] = useState([]);
+
+    useEffect(()=>{
+        axios.get("http://localhost:3001/products")
+        .then(function(responce){
+            setProducts(responce.data)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    },[])
+
     return(
         <>
             <Header isLogged={isLogged}/>
@@ -72,6 +87,38 @@ function Main ({isLogged}) {
                             <button>SHOP NOW</button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={styleMain.categories}>
+                <h3>Categories For Men</h3>
+                <div className={styleMain.categories__item}>
+                    {
+                        products.filter((e)=> e.category === "Men").map((e)=>(
+                            <div key={e.id} className={styleMain.categories__card}>
+                                <img src={e.img} alt="#" />
+                                <Link to="/men">
+                                    <h5>{e.title}</h5>
+                                </Link>
+                                <span>{e.brand}</span>
+                            </div>                        
+                        )).slice(2,10)
+                    }
+                </div>
+            </div>
+            <div className={styleMain.categories}>
+                <h3>Categories For Women</h3>
+                <div className={styleMain.categories__item}>
+                    {
+                        products.filter((e)=> e.category === "Women").map((e)=>(
+                            <div key={e.id} className={styleMain.categories__card}>
+                                <img src={e.img} alt="#" />
+                                <Link to="/women">
+                                    <h5>{e.title}</h5>
+                                </Link>
+                                <span>{e.brand}</span>
+                            </div>                        
+                        )).slice(4,12)
+                    }
                 </div>
             </div>
             <div className={styleMain.brands}>
