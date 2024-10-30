@@ -1,0 +1,149 @@
+.filterCard{
+    width: 100%;
+    max-width: 295px;
+    height: 100%;
+
+    border-radius: 0px 0px 2px 2px;
+    border: 1px solid rgba(190, 188, 189, 0.4);
+    border-top: none;
+
+    h3{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+        
+        padding: 24px;
+        color: #3C4242;
+
+        border: 1px solid rgba(190, 188, 189, 0.4);
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.filterCard__type{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 40px 38px;
+}
+
+.filterCard__type__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Causten';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #8A8989;
+}
+
+.filterCard__color{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 38px;
+    text-align: center;
+
+    span{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: #8A8989;
+    }
+}
+
+.filterCard__color__item{
+    margin-bottom: 10px;
+    width: 36.73px;
+    height: 36.73px;
+
+    border-radius: 12px;
+    border: 1px solid #BEBCBD;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.filterCard__price{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 38px;
+
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    span{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #8A8989;
+    }
+
+    input{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #3C4242;
+        text-align: center;
+        width: 97px;
+        height: 32px;
+
+        border: 1px solid #BEBCBD;
+        border-radius: 8px;
+        /* opacity: 0.8; */
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.filterCard__size{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 40px 36px;
+}
+
+.filterCard__size__item{
+    font-family: 'Causten', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    line-height: 17px;
+    padding: 7px 0;
+    width: 60px;
+
+    border: 1px solid #BEBCBD;
+    border-radius: 8px;
+    color: #3C4242;
+    opacity: 0.8;
+    cursor: pointer;
+}

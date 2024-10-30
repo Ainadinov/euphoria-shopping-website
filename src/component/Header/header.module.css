@@ -79,8 +79,9 @@ nav{
 
 
 .btns{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
     gap: 12px;
 }
 

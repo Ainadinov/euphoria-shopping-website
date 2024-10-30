@@ -8,6 +8,10 @@
       }
     ],
 
+    "orders": {
+      "eyJhbGciOiJSUzI1NiIsImtpZCI6IjcxOGY0ZGY5MmFkMTc1ZjZhMDMwN2FiNjVkOGY2N2YwNTRmYTFlNWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZXVwaG9yaWEtZmlyZWJhc2UiLCJhdWQiOiJldXBob3JpYS1maXJlYmFzZSIsImF1dGhfdGltZSI6MTcyOTYxNzQ4MiwidXNlcl9pZCI6IkExWkNPMGxiWVBneU9IcEFTVkU2MVhFN2I3dDIiLCJzdWIiOiJBMVpDTzBsYllQZ3lPSHBBU1ZFNjFYRTdiN3QyIiwiaWF0IjoxNzI5NjE3NDgyLCJleHAiOjE3Mjk2MjEwODIsImVtYWlsIjoiYS5hZGlsZXQuOTdAbWFpbC5ydSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhLmFkaWxldC45N0BtYWlsLnJ1Il19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.c5hbkMKP-lPEJB86kFTnoSPoam7GtSmKVxwOKVi5PkVfgygj6DaZiUECzs_wRPemZBKzRaIUmuw0nIS7HjQZpCppCIVpYZMwR1PiXV5ugE7VI5l1boB5QmSu8TK863lL5JMrunnGDLpJSyyiTz2k5rv4zPxEOEAZ6b_PpXZLw56o7-n2cTqO5KLYLxGY-nt9OK43r_knk9j9lg-odsIOxoiA_WHQvWYBma8WVRQp1tI0jIFFfbr1G7JZwHshjVU2hcdMKOY-JA9G2_AZzHUfyBNB7eHnbysmeEHdsXTBkjbxxBZBKmVHPUcjSNYsBclhM8FRoqVcMk8Z5nPcEwL2Xg": {}
+    },
+
     "products":[
         {
           "id": 1,
@@ -17,7 +21,7 @@
           "category": "Women",
           "type": "Top",
           "price": 63.00,
-          "size": ["XS", "S", "M", "L", "XS"],
+          "size": ["XXS", "S", "M", "L", "XS"],
           "color": ["red", "yellow", "black"],
           "rating": 3.5
         },
@@ -29,7 +33,7 @@
           "category": "Women",
           "type": "T-shirt",
           "price": 11.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XXS", "S", "M", "L", "XL"],
           "color": ["white"],
           "rating": 4.5
         },
@@ -53,7 +57,7 @@
           "category": "Women",
           "type": "Top",
           "price": 77.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XS", "S", "M", "L"],
           "color": ["white", "black", "gray"],
           "rating": 4.1        
         },
@@ -65,7 +69,7 @@
           "category": "Women",
           "type": "T-shirt",
           "price": 29.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XS", "S", "L", "XL"],
           "color": ["white", "black", "gray"],
           "rating": 3.8        
         },
@@ -89,7 +93,7 @@
           "category": "Women",
           "type": "Top",
           "price": 77.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XXS", "S", "M", "L", "XL"],
           "color": ["white", "black", "gray", "red"],
           "rating": 4.2        
         },
@@ -101,7 +105,7 @@
           "category": "Women",
           "type": "Top",
           "price": 29.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XS", "S", "XL"],
           "color": ["yellow"],
           "rating": 4.5        
         },
@@ -113,7 +117,7 @@
           "category": "Women",
           "type": "T-Shirt",
           "price": 37.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XS", "S", "M", "L", "XL", "XXS"],
           "color": ["black", "qray"],
           "rating": 4.3        
         },
@@ -125,7 +129,7 @@
           "category": "Women",
           "type": "T-Shirt",
           "price": 77.00,
-          "size": ["XS", "S", "M", "L", "XL"],
+          "size": ["XXS", "S", "M", "L"],
           "color": ["black", "qray"],
           "rating": 4.4        
         },
@@ -161,8 +165,8 @@
           "category": "Men",
           "type": "Sweatshirt",
           "price": 127.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white"],
+          "size": ["XXS", "S", "M", "L", "XL"],
+          "color": ["black", "black", "white", "green"],
           "rating": 4.7       
         },
         {
@@ -173,8 +177,8 @@
           "category": "Men",
           "type": "Jacket",
           "price": 79.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white"],
+          "size": ["XS", "S", "M", "L"],
+          "color": ["black", "white"],
           "rating": 4.2       
         },
         {
@@ -183,10 +187,10 @@
           "img": "/img/Men/Checks-Shirt-with-whiteT-Shirt-id-15.png",
           "brand": "H.M’s  Brand",
           "category": "Men",
-          "type": "Shirt",
+          "type": "Top",
           "price": 132.00,
           "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "color": ["black", "white", "gray"],
           "rating": 4.2       
         },
         {
@@ -197,8 +201,8 @@
           "category": "Men",
           "type": "Shirt",
           "price": 38.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["XXS", "S", "XL"],
+          "color": ["black", "white", "blue"],
           "rating": 4.5       
         },
         {
@@ -209,8 +213,8 @@
           "category": "Men",
           "type": "T-Shirt",
           "price": 138.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["XS", "S", "M", "L", "XL", "XXS"],
+          "color": ["white"],
           "rating": 4.5       
         },
         {
@@ -219,10 +223,10 @@
           "img": "/img/Men/Plain-T-Shirt-id-18.png",
           "brand": "H.M’s  Brand",
           "category": "Men",
-          "type": "T-Shirts",
+          "type": "T-Shirt",
           "price": 50.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["XS", "S", "M", "L", "XXS"],
+          "color": ["black", "white", "red"],
           "rating": 4.1       
         },
         {
@@ -231,10 +235,10 @@
           "img": "/img/Men/Polo-T-Shirt-id-19.png",
           "brand": "Polo Ralph Lauren",
           "category": "Men",
-          "type": "T-Shirts",
+          "type": "T-Shirt",
           "price": 150.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["XS", "M", "L", "XL"],
+          "color": ["black", "white", "red", "green", "pink"],
           "rating": 4.1       
         },
         {
@@ -246,7 +250,7 @@
           "type": "Jeans",
           "price": 250.00,
           "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "color": ["black", "white", "gray"],
           "rating": 4.1       
         },
         {
@@ -257,8 +261,8 @@
           "category": "Men",
           "type": "Joggers",
           "price": 250.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["XS", "L", "XL"],
+          "color": ["black", "gray"],
           "rating": 4.7       
         },
         {
@@ -267,10 +271,10 @@
           "img": "/img/Men/Printed-T-Shirts-id-22.png",
           "brand": "MOMO’s  Brand",
           "category": "Men",
-          "type": "T-Shirts",
+          "type": "T-Shirt",
           "price": 50.00,
-          "size": ["XS", "S", "M", "L", "XL"],
-          "color": ["black", "black", "white", "red"],
+          "size": ["S", "M", "L", "XL"],
+          "color": ["black", "red"],
           "rating": 4.7       
         }
     ]

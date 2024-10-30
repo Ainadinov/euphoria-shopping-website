@@ -5,6 +5,8 @@ import Main from "./component/Main/Main";
 import AuthSignUp from "./component/SignUp/SignUp";
 import UserInfo from "./component/UserInfo/UserInfo";
 import Orders from "./component/UserInfo/Orders/Orders";
+import MenClothes from "./component/Men/Men";
+import WomenClothes from "./component/Women/Women";
 // json-server --watch db.json --port 5000
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/auth-signup" element={<AuthSignUp/>}/>      
           <Route path="/user-info" element={<UserInfo setIsLogged={setIsLogged} isLogged={isLogged}/>}/>      
           <Route path="/user-info/orders" element={<Orders isLogged={isLogged}/>}/>      
+          <Route path="/men" element={<MenClothes isLogged={isLogged}/>}/>      
+          <Route path="/women" element={<WomenClothes isLogged={isLogged}/>}/>      
         </Routes>
     </BrowserRouter>
 
