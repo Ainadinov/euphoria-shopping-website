@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/header"
 import styleMenClothes from "./men.module.css"
@@ -7,7 +8,7 @@ import axios from "axios";
 import FilterCard from "../FilterCard/FilterCard";
 
 
-function MenClothes ({isLogged}) {
+function MenClothes ({isLogged, handleToSingleProduct}) {
     const [isMenProducts, setIsMenProducst] = useState([]);
 
     const [priceRange, setPriceRange] = useState({min:0, max:300});
@@ -63,7 +64,9 @@ function MenClothes ({isLogged}) {
                                         <FaRegHeart className={styleMenClothes.cards__icon}/>
                                         <div className={styleMenClothes.cards__subitem}>
                                             <div>
-                                                <h6>{e.title}</h6>
+                                                <Link to="/single-product">
+                                                    <h6 onClick={() =>handleToSingleProduct(e.id)}>{e.title}</h6>
+                                                </Link>
                                                 <span>{e.brand}</span>
                                             </div>
                                             <div className={styleMenClothes.cards__subitem__price}>

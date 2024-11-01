@@ -36,7 +36,9 @@ function Header({isLogged}){
                 <Link to={ isLogged ? "/user-info" : "/auth-signin"}>
                     <PiUser className={styleHeader.icon}/>
                 </Link>
-                <IoCartOutline className={styleHeader.icon}/>
+                <Link to="/cart">
+                    <IoCartOutline className={styleHeader.icon}/>
+                </Link>
             </div>
             
         </header>

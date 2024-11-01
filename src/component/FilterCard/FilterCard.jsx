@@ -40,7 +40,7 @@ function FilterCard ({ setPriceRange, priceRange, selectedColors, setSelectedCol
                 <div className={styleFilterCard.filterCard__type}>
                     {
                         ["Top", "T-Shirt", "Shorts", "Sweatshirt", "Jacket", "Shirt", "Jeans", "Joggers"].map((type) =>(
-                            <div className={styleFilterCard.filterCard__type__items} onClick={() => onTypeChange(type)}>
+                            <div key={type} className={styleFilterCard.filterCard__type__items} onClick={() => onTypeChange(type)}>
                                 <span>{type}</span>
                                 {
                                     selectedType.includes(type) ?  <FaPlus /> :<FaMinus />
