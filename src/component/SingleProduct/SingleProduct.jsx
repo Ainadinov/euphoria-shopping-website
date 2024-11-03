@@ -27,6 +27,34 @@ function SingleProduct ({isLogged, isSingleProduct, handleToSingleProduct}){
         })
     },[])
 
+    const handleAddToCart = () => {
+        if(chooseSize === null || chooseColor === null){
+            return alert("Choose product color and size!");
+        }
+
+        const cartItem = {
+            id: isSingleProduct.id,
+            img: isSingleProduct.img,
+            title: isSingleProduct.title,
+            price: isSingleProduct.price,
+            color: chooseColor,
+            size: chooseSize,
+            quantity: 1
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existingProduct = cart.find(item => item.id === cartItem.id && item.color === cartItem.color && item.size === cartItem.size);
+
+        if (!existingProduct) {
+            cart.push(cartItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert("Product added to cart!");
+        } else {
+            alert("Product is already in the cart!");
+        }
+    };
+
     return(
         <>
             <Header isLogged={isLogged}/>
@@ -78,7 +106,7 @@ function SingleProduct ({isLogged, isSingleProduct, handleToSingleProduct}){
                         </div>
                     </div>
                     <div className={styleSingleProduct.singleProduct__price}>
-                        <button><BsCart2 /> Add to cart</button>
+                        <button onClick={() => handleAddToCart()}><BsCart2 /> Add to cart</button>
                         <div>$ {isSingleProduct.price}</div>
                     </div>
                     <div className={styleSingleProduct.singleProduct__service}>
@@ -111,7 +139,7 @@ function SingleProduct ({isLogged, isSingleProduct, handleToSingleProduct}){
                                 <FaRegHeart className={styleSingleProduct.cards__icon}/>
                                 <div className={styleSingleProduct.cards__subitem}>
                                     <div>
-                                        <Link to="/single-product">
+                                        <Link to={`/single-product/${e.id}`}>
                                             <h6 onClick={() =>handleToSingleProduct(e.id)}>{e.title}</h6>
                                         </Link>
                                         <span>{e.brand}</span>

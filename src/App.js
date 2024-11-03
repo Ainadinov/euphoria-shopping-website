@@ -27,6 +27,7 @@ function App() {
     axios.get(`http://localhost:3001/products/${id}`)
         .then(function(responce){
           setIsSingleProduct(responce.data)
+          window.scrollTo(0, 0);
         })
         .catch(function(error){
             console.log(error)
@@ -44,7 +45,7 @@ function App() {
           <Route path="/men" element={<MenClothes isLogged={isLogged} handleToSingleProduct={handleToSingleProduct}/>}/>      
           <Route path="/women" element={<WomenClothes isLogged={isLogged} handleToSingleProduct={handleToSingleProduct}/>}/>  
           <Route path="/cart" element={<Cart isLogged={isLogged}/>}/>    
-          <Route path="/single-product" element={<SingleProduct isLogged={isLogged} isSingleProduct={isSingleProduct} handleToSingleProduct={handleToSingleProduct}/>}/>    
+          <Route path="/single-product/:id" element={<SingleProduct isLogged={isLogged} isSingleProduct={isSingleProduct} handleToSingleProduct={handleToSingleProduct}/>}/>    
         </Routes>
     </BrowserRouter>
   );

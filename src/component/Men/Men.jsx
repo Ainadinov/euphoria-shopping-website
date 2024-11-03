@@ -64,7 +64,7 @@ function MenClothes ({isLogged, handleToSingleProduct}) {
                                         <FaRegHeart className={styleMenClothes.cards__icon}/>
                                         <div className={styleMenClothes.cards__subitem}>
                                             <div>
-                                                <Link to="/single-product">
+                                                <Link to={`/single-product/${e.id}`}>
                                                     <h6 onClick={() =>handleToSingleProduct(e.id)}>{e.title}</h6>
                                                 </Link>
                                                 <span>{e.brand}</span>

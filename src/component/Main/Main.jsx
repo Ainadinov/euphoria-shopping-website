@@ -96,7 +96,7 @@ function Main ({isLogged}) {
                         products.filter((e)=> e.category === "Men").map((e)=>(
                             <div key={e.id} className={styleMain.categories__card}>
                                 <img src={e.img} alt="#" />
-                                <Link to="/men">
+                                <Link to={`/single-product/${e.id}`}>
                                     <h5>{e.title}</h5>
                                 </Link>
                                 <span>{e.brand}</span>
@@ -112,7 +112,7 @@ function Main ({isLogged}) {
                         products.filter((e)=> e.category === "Women").map((e)=>(
                             <div key={e.id} className={styleMain.categories__card}>
                                 <img src={e.img} alt="#" />
-                                <Link to="/women">
+                                <Link to={`/single-product/${e.id}`}>
                                     <h5>{e.title}</h5>
                                 </Link>
                                 <span>{e.brand}</span>

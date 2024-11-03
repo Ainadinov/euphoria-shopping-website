@@ -5,6 +5,8 @@
     align-items: center;
     padding: 100px 0;
 
+    border-top: 1px solid #BEBCBD;
+
     h5{
         font-weight: 600;
         font-size: 34px;
@@ -33,11 +35,52 @@
     }
 }
 
+.cart__full{
+    border-top: 1px solid #BEBCBD;
+}
+
+.cart__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 100px;
+
+    div{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+
+        color: #807D7E;
+    }
+
+    span{
+        color: #3C4242;
+    }
+
+    p{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0.02em;
+
+        color: #807D7E;
+    }
+
+    a{
+        font-weight: 600;
+        color: #8A33FD;
+    }
+}
+
 .cart__head{
     display: grid;
     grid-template-columns: 1.5fr repeat(4, 1fr);
     text-align: center;
-    padding: 28px 32px;
+    padding: 28px 100px;
 
     background-color: #3C4242;
     color: #FFFFFF;
@@ -54,7 +97,8 @@
     grid-template-columns: 1.5fr repeat(4, 1fr);
     text-align: center;
     align-items: center;
-    padding: 28px 32px;
+    padding: 70px 0;
+    margin: 0 100px;
 
     font-weight: 700;
     font-size: 18px;
@@ -62,6 +106,8 @@
     letter-spacing: 0.02em;
 
     color: #3C4242;
+
+    border-bottom: 1px solid #BEBCBD;
 
     img{
         width: 105px;
@@ -96,9 +142,36 @@
 .cart__info{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        text-align: start;
+
+        span{
+            font-family: 'Causten', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: capitalize;
+            color: #807D7E;
+        }
+    }
+
+    h2{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+
+        color: #3C4242;
+    }
 }
 
 .cart__trash{
@@ -114,25 +187,99 @@
     }
 }
 
-.subtotal{
+.checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 200px 40px 100px;
+    margin-top: 50px;
+
+    background-color: #F6F6F6;
+}
+
+.checkout__items{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 15px;
 
-    padding: 30px 295px 30px 0;
+    h4{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+
+        color: #3C4242;
+    }
 
     span{
-        font-weight: 700;
-        font-size: 22px;
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 40px;
+
+        color: #807D7E;
+    }
+
+    input{
+        padding: 10px;
+        background: #FFFFFF;
+        border: 1px solid #BEBCBD;
+        border-radius: 12px;
+    }
+
+    button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 12px;
+
+        background: #FFFFFF;
+        border: 1px solid #BEBCBD;
+        border-radius: 8px;
+        color: #3C4242;
+    }
+}
+
+.checkout__items__sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 465px;
+
+    span{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.02em;
 
         color: #3C4242;
     }
 
+    div{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+
+        color: #3C4242;
+
+        padding: 10px 90px 20px;
+        border-bottom: 1px solid #BEBCBD;
+    }
+
     button{
+        margin-top: 20px;
         padding: 12px 48px;
 
         background: #8A33FD;
