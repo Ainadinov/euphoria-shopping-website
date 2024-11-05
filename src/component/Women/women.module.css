@@ -82,6 +82,18 @@
     cursor: pointer;
 }
 
+.cards__icon__wishlist{
+    position: absolute;
+    left: 82%;
+    bottom: 86.6%;
+    border-radius: 17px;
+    padding: 12px;
+
+    background-color: #FFFFFF;
+    color: #8A33FD;
+    cursor: pointer;
+}
+
 .cards__subitem{
     display: flex;
     flex-direction: row;

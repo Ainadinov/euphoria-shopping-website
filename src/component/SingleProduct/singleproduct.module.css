@@ -253,18 +253,6 @@
     margin: 0 auto;
 }
 
-.cards__icon{
-    position: absolute;
-    left: 82%;
-    bottom: 86.6%;
-    border-radius: 17px;
-    padding: 12px;
-
-    background-color: #FFFFFF;
-    color: #3C4242;
-    cursor: pointer;
-}
-
 .cards__subitem{
     display: flex;
     flex-direction: row;

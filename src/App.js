@@ -1,5 +1,6 @@
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import WishList from "./component/WishList/WishList";
 import AuthSignIn from "./component/SignIn/SignIn";
 import Main from "./component/Main/Main";
 import AuthSignUp from "./component/SignUp/SignUp";
@@ -46,6 +47,7 @@ function App() {
           <Route path="/women" element={<WomenClothes isLogged={isLogged} handleToSingleProduct={handleToSingleProduct}/>}/>  
           <Route path="/cart" element={<Cart isLogged={isLogged}/>}/>    
           <Route path="/single-product/:id" element={<SingleProduct isLogged={isLogged} isSingleProduct={isSingleProduct} handleToSingleProduct={handleToSingleProduct}/>}/>    
+          <Route path="/wish-list" element={<WishList isLogged={isLogged}/>}/>
         </Routes>
     </BrowserRouter>
   );

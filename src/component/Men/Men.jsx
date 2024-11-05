@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { FaRegHeart } from "react-icons/fa";
+import { FaHeart  } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/header"
@@ -15,6 +15,8 @@ function MenClothes ({isLogged, handleToSingleProduct}) {
     const [selectedColors, setSelectedColors] = useState([]);
     const [selectedSize, setSelectedSize] = useState([]);
     const [selectedType, setSelectedType] = useState([]);
+
+    const [searchWishList, setSearchWishList] = useState([])
 
     useEffect(()=>{
         const filterArr = (products) => {
@@ -32,6 +34,12 @@ function MenClothes ({isLogged, handleToSingleProduct}) {
         })
     },[])
 
+    useEffect(() => {
+        const savedWishListItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        setSearchWishList(savedWishListItems);
+    }, []);
+
     const filteredProducts = isMenProducts.filter((product) =>{
         const matchesPrice = product.price >= priceRange.min && product.price <= priceRange.max
         const matchesColor = selectedColors.length === 0 || selectedColors.some((color)=> product.color.includes(color))
@@ -39,6 +47,30 @@ function MenClothes ({isLogged, handleToSingleProduct}) {
         const matchesType = selectedType.length === 0 || selectedType.some((type)=> product.type.includes(type))
         return matchesPrice && matchesColor && matchesSize && matchesType
     })
+
+    const handleAddToWishList = (wishList) =>{
+        const wishlistItem = {
+            id: wishList.id,
+            img: wishList.img,
+            title: wishList.title,
+            price: wishList.price,
+        };
+
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+        const existingProduct = wishlist.find(item => item.id === wishList.id );
+
+        if (!existingProduct) {
+            wishlist.push(wishlistItem);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            setSearchWishList(wishlist)
+        }else{
+            const updatedWishlistItems = wishlist.filter(item => item.id !== wishList.id);
+            localStorage.setItem('wishlist', JSON.stringify(updatedWishlistItems));
+            setSearchWishList(updatedWishlistItems)
+        }
+    }
+
     return(
         <>
             <Header isLogged={isLogged}/>
@@ -61,7 +93,14 @@ function MenClothes ({isLogged, handleToSingleProduct}) {
                                 filteredProducts.map((e)=>(
                                     <div key={e.id} className={styleMenClothes.cards__item}>
                                         <img src={e.img} alt="#" />
-                                        <FaRegHeart className={styleMenClothes.cards__icon}/>
+                                        <FaHeart  
+                                            className={
+                                                searchWishList.find((w) => w.id === e.id)
+                                                    ?
+                                                styleMenClothes.cards__icon__wishlist
+                                                    :
+                                                styleMenClothes.cards__icon} 
+                                            onClick={() => handleAddToWishList(e)}/>
                                         <div className={styleMenClothes.cards__subitem}>
                                             <div>
                                                 <Link to={`/single-product/${e.id}`}>

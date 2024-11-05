@@ -32,7 +32,9 @@ function Header({isLogged}){
             </div>
 
             <div className={styleHeader.btns}>
-                <FaRegHeart className={styleHeader.icon}/>
+                <Link to="/wish-list">
+                    <FaRegHeart className={styleHeader.icon}/>
+                </Link>
                 <Link to={ isLogged ? "/user-info" : "/auth-signin"}>
                     <PiUser className={styleHeader.icon}/>
                 </Link>

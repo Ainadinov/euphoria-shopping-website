@@ -136,7 +136,6 @@ function SingleProduct ({isLogged, isSingleProduct, handleToSingleProduct}){
                         similarProducts.filter((e)=> e.rating > 4.3).sort((a,b)=> b.raiting - a.rating).map((e)=>(
                             <div key={e.id} className={styleSingleProduct.cards__item}>
                                 <img src={e.img} alt="#" />
-                                <FaRegHeart className={styleSingleProduct.cards__icon}/>
                                 <div className={styleSingleProduct.cards__subitem}>
                                     <div>
                                         <Link to={`/single-product/${e.id}`}>
