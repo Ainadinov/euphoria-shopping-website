@@ -38,7 +38,7 @@ function App() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main isLogged={isLogged}/>}/>
+          <Route path="/" element={<Main isLogged={isLogged} handleToSingleProduct={handleToSingleProduct}/>}/>
           <Route path="/auth-signin" element={<AuthSignIn setIsLogged={setIsLogged}/>}/>      
           <Route path="/auth-signup" element={<AuthSignUp/>}/>      
           <Route path="/user-info" element={<UserInfo setIsLogged={setIsLogged} isLogged={isLogged}/>}/>      

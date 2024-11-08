@@ -25,8 +25,8 @@ function AuthSignIn ({setIsLogged}) {
 
         signInWithEmailAndPassword(auth, email, password)
         .then((user) => {
+            saveTokenToLocalStorage(user.user.uid);
             console.log(user);
-            saveTokenToLocalStorage(user.user.accessToken);
             navigate('/');
             setIsLogged(true)
         })

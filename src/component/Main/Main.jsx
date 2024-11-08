@@ -6,7 +6,7 @@ import Header from "../Header/header";
 import styleMain from "./main.module.css"
 import axios from "axios";
 
-function Main ({isLogged}) {
+function Main ({isLogged, handleToSingleProduct}) {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
@@ -97,7 +97,7 @@ function Main ({isLogged}) {
                             <div key={e.id} className={styleMain.categories__card}>
                                 <img src={e.img} alt="#" />
                                 <Link to={`/single-product/${e.id}`}>
-                                    <h5>{e.title}</h5>
+                                    <h5 onClick={() =>handleToSingleProduct(e.id)}>{e.title}</h5>
                                 </Link>
                                 <span>{e.brand}</span>
                             </div>                        
@@ -113,7 +113,7 @@ function Main ({isLogged}) {
                             <div key={e.id} className={styleMain.categories__card}>
                                 <img src={e.img} alt="#" />
                                 <Link to={`/single-product/${e.id}`}>
-                                    <h5>{e.title}</h5>
+                                    <h5 onClick={() =>handleToSingleProduct(e.id)}>{e.title}</h5>
                                 </Link>
                                 <span>{e.brand}</span>
                             </div>                        
