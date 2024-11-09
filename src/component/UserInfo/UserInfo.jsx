@@ -141,7 +141,7 @@ function UserInfo({setIsLogged, isLogged}){
     return(
         <>
             <Header isLogged={isLogged}/>
-            <div className={styleUserInfo.user_url}>Home - <span>Add To Cart</span></div>
+            <div className={styleUserInfo.user_url}>Home - <span>User Info</span></div>
             <div className={styleUserInfo.user}>
                 <div className={styleUserInfo.user__sidebar}>
                     <h1>Hello</h1>

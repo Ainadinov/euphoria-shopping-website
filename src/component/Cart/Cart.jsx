@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { FaTrashCan } from "react-icons/fa6"
+import { v4 as uuidv4 } from 'uuid';
+import { format } from 'date-fns';
 import Header from "../Header/header"
 import styleCart from "./cart.module.css"
 import Footer from "../Footer/Footer";
+import axios from "axios";
 
 function Cart ({isLogged}){
     const [cartItems, setCartItems] = useState([]);
     const [subTotal, setSubTotal] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const savedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -41,9 +45,41 @@ function Cart ({isLogged}){
         localStorage.setItem('cart', JSON.stringify(updatedCartItems));
     };
 
+
+    const handleAddToOrders = () => {
+        const savedCartItems = localStorage.getItem('accessToken');
+        const currentDate = new Date();
+        const formattedDate = format(currentDate, 'd MMMM yyyy h:mm a');
+        const newOrder = {
+            ordersId: uuidv4(),
+            date: formattedDate,
+            grandTotal: +(subTotal).toFixed(2) + 5.00,
+            items: cartItems
+        };
+    
+        axios.get(`http://localhost:3001/users/${savedCartItems}`)
+            .then((response) => {
+                const userData = response.data;
+                const updatedOrders = [...(userData.orders || []), newOrder];
+                
+                const updatedUserData = { ...userData, orders: updatedOrders };
+                
+                return axios.put(`http://localhost:3001/users/${savedCartItems}`, updatedUserData);
+            })
+            .then(() => {
+                alert("Order added successfully");
+                localStorage.removeItem('cart');
+                navigate('/user-info/orders');
+            })
+            .catch((error) => {
+                alert("Error adding order:", error);
+            });
+    };
+
     return(
         <>
             <Header isLogged={isLogged}/>
+            <div className={styleCart.cart__header}>Home - <span>Cart</span></div>
             {
                 cartItems.length === 0 ? 
                     (
@@ -115,7 +151,7 @@ function Cart ({isLogged}){
                                     <span>Shipping:   $5.00</span>
                                     <br />
                                     <div>Grand Total: ${+(subTotal).toFixed(2) + 5.00}.00 </div>
-                                    <button>Proceed To Checkout</button>
+                                    <button onClick={() => handleAddToOrders()}>Proceed To Checkout</button>
                                 </div>
                             </div>
                         </div>

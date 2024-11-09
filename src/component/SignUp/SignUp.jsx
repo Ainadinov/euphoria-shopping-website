@@ -5,6 +5,7 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import Footer from "../Footer/Footer";
+import axios from "axios";
 
 function AuthSignUp () {
     const [email, setEmail] = useState("")
@@ -25,8 +26,25 @@ function AuthSignUp () {
         }
 
         createUserWithEmailAndPassword(auth, email, password)
-        .then((user) => {
-            console.log(user);
+        .then((response) => {
+            let newUserInfo = {
+                firstName: "",
+                lastName: "",
+                email: response.user.email,
+                phoneNumber: "",
+                country: "",
+                city: "",
+                street: "",
+                index: "",
+                id: response.user.uid,
+                orders:[
+
+                ]
+            }
+            console.log(response);
+            return axios.post(`http://localhost:3001/users`, newUserInfo);
+        })
+        .then(() => {
             setError("");
             setEmail("");
             setPassword("");

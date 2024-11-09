@@ -5,7 +5,6 @@
     align-items: center;
     padding: 100px 0;
 
-    border-top: 1px solid #BEBCBD;
 
     h5{
         font-weight: 600;
@@ -35,8 +34,21 @@
     }
 }
 
-.cart__full{
+.cart__header{
+    font-family: 'Causten';
+    padding: 30px 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #807D7E;
     border-top: 1px solid #BEBCBD;
+
+
+    span{
+        color: #3C4242;
+    }
 }
 
 .cart__nav{

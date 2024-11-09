@@ -1,9 +1,24 @@
 .user{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 50px;
-    padding: 100px;
+    padding: 0 100px 100px;
+}
+
+.user_url{
+    font-family: 'Causten';
+    padding: 30px 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #807D7E;
+    border-top: 1px solid #BEBCBD;
+
+    span{
+        color: #3C4242;
+    }
 }
 
 .user__sidebar{
@@ -11,45 +26,45 @@
     flex-direction: column;
     gap: 10px;
 
-    
-h1{
-    position: relative;
-    padding-left: 21px;
+        
+    h1{
+        position: relative;
+        padding-left: 21px;
 
-    font-family: 'Core Sans C';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 34px;
+        font-family: 'Core Sans C';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
 
-    letter-spacing: 0.02em;
-    color: #3C4242;
+        letter-spacing: 0.02em;
+        color: #3C4242;
 
-    &::before{
-        content: "";
-        display: block;
+        &::before{
+            content: "";
+            display: block;
 
-        position: absolute;
-        width: 6px;
-        height: 28px;
-        left: 0px;
-        top: 1px;
+            position: absolute;
+            width: 6px;
+            height: 28px;
+            left: 0px;
+            top: 1px;
 
-        background: #8A33FD;
-        border-radius: 10px;
+            background: #8A33FD;
+            border-radius: 10px;
+        }
     }
-}
 
-p{
-    font-family: 'Core Sans C';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 34px;
-    letter-spacing: 0.02em;
+    p{
+        font-family: 'Core Sans C';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 34px;
+        letter-spacing: 0.02em;
 
-    color: #807D7E;
-}
+        color: #807D7E;
+    }
 }
 
 
@@ -100,5 +115,204 @@ p{
 
             background: #3C4242;
         }
+    }
+}
+
+.user__orders{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 895px;
+
+    h3{
+        font-family: 'Core Sans C', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0.02em;
+
+        color: #3C4242;
+    }
+}
+
+.orders__item{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+.orders__item__head{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 28px 47px;
+    
+    background-color: #F6F6F6;
+    border-radius: 8px;
+
+    h4{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 5px;
+
+        color: #3C4242;
+    }
+
+    p{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+
+        color: #807D7E;
+    }
+
+    span{
+        font-weight: 500;
+        color: #BEBCBD;
+    }
+}
+
+.orders__item__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .item__info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+
+        img{
+            width: 96px;
+            height: 120px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            h5{
+                font-family: 'Causten';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+
+                padding-bottom: 5px;
+                color: #3C4242;
+            }
+
+            p{
+                font-family: 'Causten';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: #3C4242;
+            }
+
+            span{
+                text-transform: capitalize;
+                font-weight: 500;
+                color: #BEBCBD;
+            }
+
+            div{
+                font-family: 'Causten';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: #807D7E;
+            }
+        }
+    }
+
+    button{
+        font-family: 'Causten';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+       
+        padding: 14px 28px;
+        
+        background: #8A33FD;
+        border-radius: 8px;
+        color: #FFFFFF;
+        cursor: not-allowed;
+    }
+}
+
+.orders__empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    margin: 0 auto;
+
+    svg{
+        padding: 40px;
+        border-radius: 25px;
+        background-color: #F0F9F4;
+        font-size: 120px;
+        color: #8A33FD;
+    }
+    
+    h1{
+        font-family: 'Core Sans C', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 33px;
+
+        padding-top: 50px;
+        color: #3C4242;
+    }
+
+    p{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 124.7%;
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        padding-bottom: 30px;
+        width: 455px;
+        color: #807D7E;
+    }
+
+    button{
+        font-family: 'Causten', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        padding: 12px 48px;
+
+        background: #8A33FD;
+        border-radius: 8px;
     }
 }

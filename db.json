@@ -9,7 +9,106 @@
       "city": "Aqtobe",
       "street": "A.Moldagulova 285/4",
       "index": "080018546",
-      "id": "A1ZCO0lbYPgyOHpASVE61XE7b7t2"
+      "id": "A1ZCO0lbYPgyOHpASVE61XE7b7t2",
+      "orders": [
+        {
+          "ordersId": "e78ea1ad-6ddd-4b02-b4d9-838840a553c4",
+          "date": "9 November 2024 1:01 AM",
+          "grandTotal": 767,
+          "items": [
+            {
+              "id": "13",
+              "img": "/img/Men/Dark-Green-Sweatshirt-id-13.png",
+              "title": "Dark Green Sweatshirt",
+              "price": 127,
+              "color": "white",
+              "size": "S",
+              "quantity": 4
+            },
+            {
+              "id": "13",
+              "img": "/img/Men/Dark-Green-Sweatshirt-id-13.png",
+              "title": "Dark Green Sweatshirt",
+              "price": 127,
+              "color": "green",
+              "size": "M",
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "ordersId": "2f41ef79-adc2-4c40-8b4c-29a6719eedc5",
+          "date": "9 November 2024 3:16 AM",
+          "grandTotal": 825,
+          "items": [
+            {
+              "id": "1",
+              "img": "/img/Women/Raven-Hoodie-id-1.png",
+              "title": "Raven Hoodie With Black colored Design",
+              "price": 63,
+              "color": "yellow",
+              "size": "S",
+              "quantity": 3
+            },
+            {
+              "id": "13",
+              "img": "/img/Men/Dark-Green-Sweatshirt-id-13.png",
+              "title": "Dark Green Sweatshirt",
+              "price": 127,
+              "color": "black",
+              "size": "XXS",
+              "quantity": 3
+            },
+            {
+              "id": "18",
+              "img": "/img/Men/Plain-T-Shirt-id-18.png",
+              "title": "Plain T-Shirt",
+              "price": 50,
+              "color": "red",
+              "size": "M",
+              "quantity": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4zvV0fPmdfMc7BLetj20RN0snt92",
+      "firstName": "",
+      "lastName": "",
+      "email": "adok200@mail.ru",
+      "phoneNumber": "",
+      "country": "",
+      "city": "",
+      "street": "",
+      "index": "",
+      "orders": [
+        {
+          "ordersId": "6e30c667-bfd7-410e-afd8-75c43d0b6798",
+          "date": "9 November 2024 11:28 PM",
+          "grandTotal": 1221,
+          "items": [
+            {
+              "id": "13",
+              "img": "/img/Men/Dark-Green-Sweatshirt-id-13.png",
+              "title": "Dark Green Sweatshirt",
+              "price": 127,
+              "color": "black",
+              "size": "XXS",
+              "quantity": 8
+            },
+            {
+              "id": "22",
+              "img": "/img/Men/Printed-T-Shirts-id-22.png",
+              "title": "Printed-T-Shirts",
+              "price": 50,
+              "color": "black",
+              "size": "S",
+              "quantity": 4
+            }
+          ]
+        }
+      ]
     }
   ],
   "products": [
